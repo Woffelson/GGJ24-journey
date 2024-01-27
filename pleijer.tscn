@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://vhckfymc70m8"]
+
+[ext_resource type="Script" path="res://Pleijer.gd" id="1_h8bsq"]
+[ext_resource type="Texture2D" uid="uid://dc0dd17kh4y5c" path="res://GFX/torso.png" id="2_gmk8j"]
+[ext_resource type="Texture2D" uid="uid://dvqkvundaa4qa" path="res://GFX/kasi.png" id="3_85eyp"]
+[ext_resource type="Texture2D" uid="uid://ccqopjx7q1sds" path="res://GFX/keppi.png" id="4_3k15u"]
+[ext_resource type="Texture2D" uid="uid://gspwljsbrgu2" path="res://GFX/paa.png" id="5_uxafh"]
+[ext_resource type="Texture2D" uid="uid://cbmwp4y0hr3j6" path="res://GFX/jalka.png" id="6_01ep2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yocna"]
+radius = 12.0
+height = 56.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l0oqo"]
+radius = 1.0
+
+[node name="Pleijer" type="CharacterBody2D" groups=["player"]]
+position = Vector2(584, 360)
+script = ExtResource("1_h8bsq")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_yocna")
+
+[node name="Torso" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_gmk8j")
+
+[node name="Lkasi" type="Sprite2D" parent="Torso"]
+show_behind_parent = true
+texture = ExtResource("3_85eyp")
+flip_h = true
+
+[node name="Kepp" type="Sprite2D" parent="Torso/Lkasi"]
+position = Vector2(0, -8)
+rotation = -0.523599
+texture = ExtResource("4_3k15u")
+
+[node name="Rkasi" type="Sprite2D" parent="Torso"]
+texture = ExtResource("3_85eyp")
+
+[node name="Paa" type="Sprite2D" parent="Torso"]
+texture = ExtResource("5_uxafh")
+
+[node name="Ljalka" type="Sprite2D" parent="Torso"]
+show_behind_parent = true
+texture = ExtResource("6_01ep2")
+
+[node name="Ljalka2" type="Sprite2D" parent="Torso"]
+show_behind_parent = true
+texture = ExtResource("6_01ep2")
+flip_h = true
+
+[node name="Roomcheck" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roomcheck"]
+shape = SubResource("CircleShape2D_l0oqo")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://dtsr8o51l5fkx"]
 
 [ext_resource type="Script" path="res://lore.gd" id="1_0jewa"]
-[ext_resource type="Texture2D" uid="uid://b2ogqk6l7wnkl" path="res://icon.svg" id="1_uhls4"]
+[ext_resource type="Texture2D" uid="uid://b1y4fmv0qnw36" path="res://GFX/hkivi.png" id="2_s8ote"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qiie5"]
-size = Vector2(64, 64)
+size = Vector2(32, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8uhg1"]
 
@@ -40,9 +40,8 @@ mass = 0.1
 shape = SubResource("CircleShape2D_8uhg1")
 
 [node name="Sprite2D" type="Sprite2D" parent="fysik"]
-modulate = Color(1, 1, 0, 1)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_uhls4")
+texture = ExtResource("2_s8ote")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
