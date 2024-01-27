@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtsr8o51l5fkx"]
+
+[ext_resource type="Script" path="res://lore.gd" id="1_0jewa"]
+[ext_resource type="Texture2D" uid="uid://b2ogqk6l7wnkl" path="res://icon.svg" id="1_uhls4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qiie5"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8uhg1"]
+
+[node name="Lore" type="Area2D"]
+script = ExtResource("1_0jewa")
+tekstit = ["Here lies: Kilo Boi, 20XX–20YY", "Here lies: some guy, 69–420", "Here lies: developer's competency to come up with something deep ", "Here lies: a liar", "Here lies: your mom", "Here lies: Jack the RIPper, 1800s", "Here lies: no-one yet, maybe you will, idk", "Here lies: fake news", "Here lies: Maailmanlaajuinen Riistahillo 24, 2024–2024", "Here lies: the first two millenia, 0–2000", "nope"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qiie5")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 5
+z_as_relative = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.5
+offset_top = -64.0
+offset_right = 50.5
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "[Press Z]"
+horizontal_alignment = 1
+
+[node name="fysik" type="RigidBody2D" parent="."]
+mass = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fysik"]
+shape = SubResource("CircleShape2D_8uhg1")
+
+[node name="Sprite2D" type="Sprite2D" parent="fysik"]
+modulate = Color(1, 1, 0, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_uhls4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

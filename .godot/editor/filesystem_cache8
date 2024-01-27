@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1706324693
+icon.svg::CompressedTexture2D::4310814198801760227::1706299944::1706300024::1::::<><>::
+lore.gd::GDScript::-1::1706324667::0::1::::<>Area2D<>::
+lore.tscn::PackedScene::8531100782719126367::1706324693::0::1::::<><>::res://lore.gd<>uid://b2ogqk6l7wnkl::::res://icon.svg
+main.tscn::PackedScene::3474845625301764973::1706324693::0::1::::<><>::res://Pleijer.gd<>res://main.gd<>uid://b2ogqk6l7wnkl::::res://icon.svg<>uid://dtsr8o51l5fkx::::res://lore.tscn<>uid://c72h1kyw3xl66::::res://GFX/tiilet0.tres
+Pleijer.gd::GDScript::-1::1706322902::0::1::::<>CharacterBody2D<>::
+main.gd::GDScript::-1::1706324425::0::1::::<>Node2D<>::
+Teksti.gd::GDScript::-1::1706318377::0::1::::<>Node<>::
+teksti.tscn::PackedScene::5046024420531406944::1706324693::0::1::::<><>::res://Teksti.gd
+teksti_base.gd::GDScript::-1::1706318203::0::1::::<>Node<>::
+::res://GFX/::1706324858
+tausta0.png::CompressedTexture2D::3130878935188661794::1706324832::1706324868::1::::<><>::
+tiilet0.tres::TileSet::7075094576100466849::1706321872::0::1::::<><>::uid://c7n4dqn4ri15d::::res://GFX/tilesettii0.png
+tilesettii0.png::CompressedTexture2D::7047488286574707863::1706321404::1706321466::1::::<><>::

@@ -1,0 +1,14 @@
+CanvasLayer
+TextureRect
+Node
+CollisionShape2D
+RigidBody2D
+TileMap
+Label
+Sprite2D
+Area2D
+MarginContainer
+Timer
+Panel
+CharacterBody2D
+StaticBody2D
