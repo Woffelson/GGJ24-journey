@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706424804
-hologram.gdshader::Shader::-1::1706424548::0::1::::<><>::
+::res://::1706425918
+hologram.gdshader::Shader::-1::1706425414::0::1::::<><>::
 icon.svg::CompressedTexture2D::4310814198801760227::1706299944::1706300024::1::::<><>::
-::res://Beisiks/::1706424548
+::res://Beisiks/::1706425275
 bana.gd::GDScript::-1::1706421863::0::1::::<>RigidBody2D<>::
 bana.tscn::PackedScene::4210373265417169127::1706424547::0::1::::<><>::res://Beisiks/bana.gd<>uid://1islsojgbvdv::::res://GFX/panana.png
 banaspawner.gd::GDScript::-1::1706379022::0::1::::<>Node2D<>::
@@ -15,7 +15,7 @@ lore.tscn::PackedScene::8531100782719126367::1706424547::0::1::::<><>::res://Bei
 main.gd::GDScript::-1::1706424448::0::1::::<>Node2D<>::
 main.tscn::PackedScene::3474845625301764973::1706424547::0::1::::<><>::res://Beisiks/main.gd<>uid://cd5ljxotmc6qu::::res://Beisiks/teksti.tscn<>uid://vhckfymc70m8::::res://Beisiks/pleijer.tscn<>uid://dox7wefof253j::::res://Beisiks/pausemenu.tscn<>uid://c72h1kyw3xl66::::res://GFX/tiilet0.tres<>uid://dtsr8o51l5fkx::::res://Beisiks/lore.tscn<>uid://di5x3c8u638oe::::res://GFX/lonkers.tres<>uid://drrx0n7elmndb::::res://SFX/wapawapa.wav<>uid://bkuvebe31u50y::::res://GFX/tausta0.png<>uid://b4ayu4bgye2vd::::res://GFX/junkle.png<>uid://bcrldflb5de0y::::res://SFX/darksong.ogg<>uid://dg7hhkss3yprq::::res://SFX/viirakko.ogg<>uid://clt2we8h85f82::::res://Beisiks/kyltti.tscn<>uid://pjgit5t0w4yc::::res://GFX/piikit.png<>uid://cr3wi2cqlbwc3::::res://Beisiks/banaspawner.tscn<>uid://7ph7s1544jy::::res://Beisiks/dieline.tscn
 main_menu.gd::GDScript::-1::1706415804::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::8513355928053989202::1706424548::0::1::::<><>::res://Beisiks/main_menu.gd<>uid://bxx1x2dr8iso4::::res://GFX/titteli.png<>uid://bprig16wnpqoj::::res://Beisiks/main.tscn<>uid://cd5ljxotmc6qu::::res://Beisiks/teksti.tscn<>res://hologram.gdshader<>uid://bxj31nuq1rmq::::res://SFX/jourenyintro.ogg<>uid://cnim1f8tu6378::::res://GFX/valopimee.png<>uid://nybesxsw876d::::res://GFX/valo.png
+main_menu.tscn::PackedScene::8513355928053989202::1706425223::0::1::::<><>::res://Beisiks/main_menu.gd<>uid://bxx1x2dr8iso4::::res://GFX/titteli.png<>uid://bprig16wnpqoj::::res://Beisiks/main.tscn<>uid://cd5ljxotmc6qu::::res://Beisiks/teksti.tscn
 pausemenu.gd::GDScript::-1::1706417486::0::1::::<>TextureRect<>::
 pausemenu.tscn::PackedScene::8191369000050863073::1706424548::0::1::::<><>::uid://dxue4pwwhgxt3::::res://GFX/inventory.png<>uid://dmk0ewpakmnpv::::res://GFX/map.png<>res://Beisiks/pausemenu.gd
 Pleijer.gd::GDScript::-1::1706421558::0::1::::<>CharacterBody2D<>::

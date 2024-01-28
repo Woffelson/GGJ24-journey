@@ -1,3 +1,8 @@
+AudioStreamPlayer
+Button
+VBoxContainer
+TextureRect
+Control
 Label
 Timer
 Node2D
@@ -5,13 +10,9 @@ CollisionShape2D
 Area2D
 AnimatedSprite2D
 RigidBody2D
-AudioStreamPlayer
 PointLight2D
 Sprite2D
 CanvasLayer
-TextureRect
-VBoxContainer
-Button
 MarginContainer
 ColorRect
 TileMap
