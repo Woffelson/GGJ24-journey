@@ -25,8 +25,10 @@ wait_time = 2.0
 autostart = true
 
 [node name="Area2D" type="Area2D" parent="." groups=["bana"]]
+collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_lolhq")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

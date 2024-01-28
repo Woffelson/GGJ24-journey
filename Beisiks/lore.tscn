@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dtsr8o51l5fkx"]
 
 [ext_resource type="Script" path="res://Beisiks/lore.gd" id="1_01cis"]
-[ext_resource type="Texture2D" uid="uid://b1y4fmv0qnw36" path="res://GFX/hkivi.png" id="2_yeql7"]
+[ext_resource type="Texture2D" uid="uid://b0q5ah7vxdd23" path="res://GFX/hkivi2.png" id="2_asa3e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qiie5"]
 size = Vector2(32, 32)
@@ -10,7 +10,7 @@ size = Vector2(32, 32)
 
 [node name="Lore" type="Area2D"]
 script = ExtResource("1_01cis")
-tekstit = ["Here lies: Kilo Boi, 20XX–20YY", "Here lies: some guy, 69–420", "Here lies: developer's competency to come up with deep lore", "Here lies: a liar", "Here lies: your mom", "Here lies: Ex-gravestone kicker", "Here lies: no-one yet, maybe you will, idk", "Here lies: deceptions", "Here lies: Maailmanlaajuinen Riistahillo 24, 2024–2024", "Here lies: the first two millenia, 0–2000", "nope"]
+tekstit = ["Here lies: Kilo Boi, 20XX–20YY", "Here lies: some guy, 69–420", "Here lies: developer's competency to come up with deep lore", "Here lies: a liar", "Here lies: your mom", "Here lies: Ex-gravestone kicker", "Here lies: no-one yet, maybe you will, idk", "Here lies: deceptions", "Here lies: Maailmanlaajuinen Riistahillo #24", "Here lies: the first two millenia, 0–2000", "nope"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qiie5")
@@ -41,7 +41,7 @@ shape = SubResource("CircleShape2D_8uhg1")
 
 [node name="Sprite2D" type="Sprite2D" parent="fysik"]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_yeql7")
+texture = ExtResource("2_asa3e")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

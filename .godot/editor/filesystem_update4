@@ -8,3 +8,14 @@ res://Beisiks/kyltti.tscn
 res://Beisiks/bana.tscn
 res://Beisiks/banaspawner.tscn
 res://Beisiks/main_menu.tscn
+res://Beisiks/main.gd
+res://Beisiks/bana.gd
+res://hologram.gdshader
+res://Beisiks/main_menu.gd
+res://Beisiks/pausemenu.tscn
+res://Beisiks/pausemenu.gd
+res://Beisiks/Pleijer.gd
+res://Beisiks/proje.tscn
+res://Beisiks/proje.gd
+res://Beisiks/dieline.tscn
+res://Beisiks/dieline.gd

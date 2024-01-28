@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var proje : Resource
+
 var hor = 0
 var dir = -1
 
@@ -43,7 +45,13 @@ func _physics_process(delta):
 	else: call_deferred("set_collision_mask_value",2,true)#set_collision_mask_value(layer,true)
 	
 	move_and_slide()
-	if Input.is_action_just_pressed("key_x"): $Kepu.play("viuh")
+	if Input.is_action_just_pressed("key_x"):
+		if $Kepu.get_current_animation_length() == $Kepu.get_current_animation_position():
+			var pro = proje.instantiate()
+			get_parent().add_child(pro)
+			pro.position = position - Vector2(0,32)
+			pro.linear_velocity.x = 500 * -sign(torso.scale.x)
+			$Kepu.play("viuh")
 
 func _on_roomcheck_area_entered(area):
 	emit_signal("kamera",area)

@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://7ph7s1544jy"]
+
+[ext_resource type="Script" path="res://Beisiks/dieline.gd" id="1_fpqlv"]
+[ext_resource type="Texture2D" uid="uid://c8266m50ni1u" path="res://GFX/line1.png" id="1_gavnu"]
+[ext_resource type="Texture2D" uid="uid://db27853spmpog" path="res://GFX/line0.png" id="2_fc7y7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0q830"]
+size = Vector2(320, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y3xei"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gavnu")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fc7y7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_opiig"]
+size = Vector2(320, 48)
+
+[node name="Dieline" type="RigidBody2D" groups=["dead"]]
+collision_layer = 17
+collision_mask = 16
+freeze = true
+script = ExtResource("1_fpqlv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0q830")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_y3xei")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_opiig")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

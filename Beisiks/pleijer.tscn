@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://vhckfymc70m8"]
+[gd_scene load_steps=20 format=3 uid="uid://vhckfymc70m8"]
 
 [ext_resource type="Script" path="res://Beisiks/Pleijer.gd" id="1_kjx47"]
+[ext_resource type="PackedScene" uid="uid://pwvusuquvhom" path="res://Beisiks/proje.tscn" id="2_817vb"]
 [ext_resource type="Texture2D" uid="uid://dc0dd17kh4y5c" path="res://GFX/torso.png" id="2_mj2k0"]
 [ext_resource type="Texture2D" uid="uid://dvqkvundaa4qa" path="res://GFX/kasi.png" id="3_vgmgu"]
 [ext_resource type="Texture2D" uid="uid://ccqopjx7q1sds" path="res://GFX/keppi.png" id="4_062os"]
@@ -274,6 +275,7 @@ position = Vector2(584, 360)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_kjx47")
+proje = ExtResource("2_817vb")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
