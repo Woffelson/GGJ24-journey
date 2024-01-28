@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://7ph7s1544jy"]
+[gd_scene load_steps=8 format=3 uid="uid://7ph7s1544jy"]
 
 [ext_resource type="Script" path="res://Beisiks/dieline.gd" id="1_fpqlv"]
 [ext_resource type="Texture2D" uid="uid://c8266m50ni1u" path="res://GFX/line1.png" id="1_gavnu"]
 [ext_resource type="Texture2D" uid="uid://db27853spmpog" path="res://GFX/line0.png" id="2_fc7y7"]
+[ext_resource type="Texture2D" uid="uid://bxiymttcog1ym" path="res://GFX/kallo.png" id="4_uqrqo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0q830"]
 size = Vector2(320, 32)
@@ -47,5 +48,16 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_opiig")
+
+[node name="kallot" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="kallot"]
+position = Vector2(-112, 0)
+texture = ExtResource("4_uqrqo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="kallot"]
+position = Vector2(112, 0)
+texture = ExtResource("4_uqrqo")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

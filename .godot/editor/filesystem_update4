@@ -14,3 +14,8 @@ res://Beisiks/banaspawner.tscn
 res://Beisiks/pausemenu.tscn
 res://Beisiks/proje.tscn
 res://Beisiks/dieline.tscn
+res://Beisiks/main.gd
+res://Beisiks/viimone.tscn
+res://Beisiks/dieline.gd
+res://Beisiks/viimone.gd
+res://Scripts/Global.gd
