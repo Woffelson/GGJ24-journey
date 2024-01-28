@@ -1,0 +1,60 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://di5x3c8u638oe"]
+
+[ext_resource type="Texture2D" uid="uid://b6ybwwbo4tgwj" path="res://GFX/lonkers.png" id="1_puw1q"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t0nf3"]
+texture = ExtResource("1_puw1q")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(2, 4)
+0:0/next_alternative_id = 4
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+2:0/size_in_atlas = Vector2i(2, 1)
+2:0/next_alternative_id = 4
+2:0/0 = 0
+2:0/1 = 1
+2:0/1/flip_h = true
+2:0/2 = 2
+2:0/2/flip_v = true
+2:0/3 = 3
+2:0/3/flip_h = true
+2:0/3/flip_v = true
+2:1/size_in_atlas = Vector2i(1, 3)
+2:1/next_alternative_id = 4
+2:1/0 = 0
+2:1/1 = 1
+2:1/1/flip_h = true
+2:1/2 = 2
+2:1/2/flip_v = true
+2:1/3 = 3
+2:1/3/flip_h = true
+2:1/3/flip_v = true
+3:1/size_in_atlas = Vector2i(1, 2)
+3:1/next_alternative_id = 4
+3:1/0 = 0
+3:1/1 = 1
+3:1/1/flip_v = true
+3:1/2 = 2
+3:1/2/flip_h = true
+3:1/2/flip_v = true
+3:1/3 = 3
+3:1/3/flip_h = true
+3:3/next_alternative_id = 4
+3:3/0 = 0
+3:3/1 = 1
+3:3/1/flip_h = true
+3:3/2 = 2
+3:3/2/flip_v = true
+3:3/3 = 3
+3:3/3/flip_h = true
+3:3/3/flip_v = true
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_t0nf3")

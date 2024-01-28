@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr3wi2cqlbwc3"]
+
+[ext_resource type="Script" path="res://Beisiks/banaspawner.gd" id="1_h45up"]
+[ext_resource type="PackedScene" uid="uid://b08sh52xff8rj" path="res://Beisiks/bana.tscn" id="2_at44x"]
+[ext_resource type="AudioStream" uid="uid://omoss1i8cqpj" path="res://SFX/plurts.wav" id="3_71g1r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5pgi3"]
+radius = 1.0
+
+[node name="banaspawner" type="Node2D"]
+position = Vector2(2560, -32)
+script = ExtResource("1_h45up")
+ban = ExtResource("2_at44x")
+metadata/_edit_group_ = true
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="PLOTS" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_71g1r")
+volume_db = 3.748
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5pgi3")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b08sh52xff8rj"]
+
+[ext_resource type="Script" path="res://Beisiks/bana.gd" id="1_8a38p"]
+[ext_resource type="Texture2D" uid="uid://1islsojgbvdv" path="res://GFX/panana.png" id="1_nqska"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8nesj"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lolhq"]
+radius = 36.0
+
+[node name="Bana" type="RigidBody2D"]
+script = ExtResource("1_8a38p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_8nesj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_nqska")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="." groups=["bana"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_lolhq")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://clt2we8h85f82"]
+
+[ext_resource type="Script" path="res://Beisiks/lore.gd" id="1_ihvmd"]
+[ext_resource type="Texture2D" uid="uid://cifynbg6clpbo" path="res://GFX/kyltti1.png" id="2_yia5i"]
+[ext_resource type="Texture2D" uid="uid://cjt370mortme8" path="res://GFX/kyltti2.png" id="3_dgo0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qiie5"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eagss"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5gx7f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yia5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dgo0y")
+}],
+"loop": true,
+"name": &"blah",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yia5i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Kyltti" type="Area2D"]
+script = ExtResource("1_ihvmd")
+txt_index = 10
+tekstit = ["Here lies: Kilo Boi, 20XX–20YY", "Here lies: some guy, 69–420", "Here lies: developer's competency to come up with something deep ", "Here lies: a liar", "Here lies: your mom", "Here lies: Jack the RIPper, 1800s", "Here lies: no-one yet, maybe you will, idk", "Here lies: fake news", "Here lies: Maailmanlaajuinen Riistahillo 24, 2024–2024", "Here lies: the first two millenia, 0–2000", "Spikes are out of order, not deadly today, sorry for the inconvenience"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qiie5")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 5
+z_as_relative = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.5
+offset_top = -64.0
+offset_right = 50.5
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "[Press Z]"
+horizontal_alignment = 1
+
+[node name="fysik" type="RigidBody2D" parent="."]
+mass = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fysik"]
+position = Vector2(0, 48)
+shape = SubResource("RectangleShape2D_eagss")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fysik"]
+process_mode = 3
+sprite_frames = SubResource("SpriteFrames_5gx7f")
+animation = &"blah"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

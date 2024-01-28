@@ -1,8 +1,10 @@
-res://main.tscn
+res://Beisiks/main.tscn
 res://GFX/tiilet0.tres
-res://main.gd
-res://teksti.tscn
-res://lore.tscn
-res://pleijer.tscn
-res://Pleijer.gd
-res://Teksti.gd
+res://GFX/lonkers.tres
+res://Beisiks/teksti.tscn
+res://Beisiks/lore.tscn
+res://Beisiks/pleijer.tscn
+res://Beisiks/kyltti.tscn
+res://Beisiks/bana.tscn
+res://Beisiks/banaspawner.tscn
+res://Beisiks/main_menu.tscn

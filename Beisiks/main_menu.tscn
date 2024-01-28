@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtj6y0622nn0u"]
+
+[ext_resource type="Script" path="res://Beisiks/main_menu.gd" id="1_2p3dy"]
+[ext_resource type="Texture2D" uid="uid://bxx1x2dr8iso4" path="res://GFX/titteli.png" id="1_lk5s4"]
+[ext_resource type="PackedScene" uid="uid://bprig16wnpqoj" path="res://Beisiks/main.tscn" id="2_axdi2"]
+[ext_resource type="PackedScene" uid="uid://cd5ljxotmc6qu" path="res://Beisiks/teksti.tscn" id="3_4eic5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4e0li"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.862745)
+border_width_left = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0.447059)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[node name="MainMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2p3dy")
+peli = ExtResource("2_axdi2")
+tekstii = ExtResource("3_4eic5")
+txt = "Software used for the project:
+Godot 4.1
+GIMP, Krita, JWildfire
+Ardour, Rosegarden
+Hydrogen, Qsynth, Vital
+etc (FOSS all the way!)"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_lk5s4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 256.0
+offset_bottom = 576.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="start" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_4e0li")
+text = "Start the Journey"
+
+[node name="scredits" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_4e0li")
+text = "Software credits"
+
+[node name="quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_4e0li")
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/scredits" to="." method="_on_scredits_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
