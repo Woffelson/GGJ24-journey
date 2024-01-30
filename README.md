@@ -1,0 +1,3 @@
+**Officially named: The Journey of the Quests IX vol 13 – Chapter 24 (Editor's Cut)**
+
+This was a solodev project made during Global Game Jam 2024 with a jam theme: *make me laugh*. That's what this code is here for as well...
