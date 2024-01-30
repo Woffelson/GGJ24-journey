@@ -21,7 +21,7 @@ func _ready():
 		lore.connect("loretime",Callable(self,"tekstaa"))
 
 func _input(_event):
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("key_esc"):
 		vaihda_skenee(Global.mainmenu)
 	if Input.is_action_just_pressed("key_enter"):
 		get_tree().paused = true

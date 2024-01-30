@@ -1,7 +1,7 @@
 extends TextureRect
 
 func _input(_event):
-	if Input.is_action_just_pressed("ui_left") || Input.is_action_just_pressed("ui_right"):
+	if Input.is_action_just_pressed("key_left") || Input.is_action_just_pressed("key_right"):
 		if texture.current_frame == 0:
 			texture.current_frame = 1
 			$inventory.hide()
